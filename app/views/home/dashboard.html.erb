@@ -1,0 +1,23 @@
+<div class="box">
+   <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+
+</div> 
+
+<section>
+  <div class="register-banner">
+    <div class="container">
+      <div class="login_inner">
+          <div class="left">
+              <div class="form_wrap-inner" style="margin-left: 320px;">
+                <h2>User Details</h2>
+                <label>First Name: <%= current_user.first_name%></label>
+                <label>Last Name: <%= current_user.last_name%></label>
+                <label>Phone <%= current_user.phone%></label>
+                 <label>Address <%= current_user.address%></label>
+                 <label> Email <%= current_user.email%></label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>

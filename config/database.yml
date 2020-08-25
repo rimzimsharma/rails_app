@@ -1,0 +1,23 @@
+common: &common
+  adapter: mysql2
+  username: root
+  password: esfera
+  pool: 5
+  host:  localhost
+  port: 3306
+
+development:
+  <<: *common
+  database: ruby_dev
+
+test:
+  <<: *common
+  database: ruby_production
+
+production:
+  adapter: mysql2
+  username: root
+  password: more#2020
+  pool: 5
+  database: ruby_production
+  port: 3306
